@@ -1,0 +1,209 @@
+@import url(reset.css);
+
+body {
+	font: 12px/1.6 Arial, Verdana, Tahoma, sans-serif;
+	color: #5d5d5d; /*цвет текста*/
+	background: #f4f4f4;
+}
+
+a {
+	color: #fe9b00;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+p {
+	margin: 8px 0;
+}
+h2, h3 {
+	font-weight: bold;
+	color: #090909;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 18px;
+	padding-left: 28px;
+	background: url(../images/arrow.png) no-repeat 0 10px;
+	margin-bottom: 11px;
+}
+h3 {
+	font-size: 12px;
+	background: url(../images/arrowSmall.png) no-repeat 0 6px;
+	padding-left: 22px;
+	margin-bottom: 20px;
+}
+.active, a:hover {
+	color: #090909;
+}
+
+#top-line {
+	background: #090909;
+	height: 16px;
+}
+#wrapper {
+	width: 960px;
+	margin: 0 auto; /*выравниваем макет по центру*/
+}
+#header {
+	padding: 20px 0 16px 0;
+	border-bottom: 1px solid #c0c0c0;
+	overflow: hidden; /*если дочерние элементы имеют свойство float, то родительскому элементу нужно задавать это свойство*/
+}
+#logo {
+	width: 183px;
+	height: 100px;
+	float: left; /*логотип прижат к левому краю, все элементы обтекают его справа*/
+} /*при задании свойства float, этот элемент выходит из потока*/
+#menu {	
+	float: right; /*меню прижато к правому краю*/
+	margin-top: 40px;
+}
+#menu ul li{
+	float: left; /*чтобы меню было горизонтальным*/
+	margin-left: 50px; /*расстояние между пунктами меню, left потому что нужен отступ слева а не справа*/
+}
+#header-image {
+	height: 380px; /*ширину можно не задавать, так как он растянется*/
+	background: url(../images/header-image.jpg) no-repeat; /*no repeat, чтобы картинка не повторялась*/
+	margin-top: 20px;
+	border-bottom: 1px solid #c0c0c0;
+	padding-bottom: 20px;
+	position: relative;
+}
+#blackbox {
+	width: 443px;
+	height: 43px;
+	background: #090909;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 1; /*межстрочный интервал, если хотим выровнять строку по центру*/
+	color: #999898;
+	position: absolute;
+	left: 35px;
+	bottom: 68px;
+}
+#blackbox p {
+	margin: 14px 12px;
+}
+#blackbox a {
+	float: right;
+}
+#blackbox a:hover {
+	color: #fe9b00;
+}
+#content {
+	margin-top: 20px;
+	border-bottom: 1px solid #c0c0c0;
+	overflow: hidden;
+	padding-bottom: 24px;
+}
+.contentbox {
+	width: 285px;
+	float: left;
+	margin-right: 52px;
+}
+#contentbox, #portfolioImage{
+	margin-right: 0;
+}
+.contentbox h2 {
+	border-bottom: 5px solid #090909;
+	padding-bottom: 3px;
+	margin-bottom: 16px;
+}
+.contentbox ul li{
+	/*list-style: url(../images/check.png); так картинки будут не по уровню*/
+	background: url(../images/check.png) 0 3px no-repeat;
+	padding-left: 28px;
+	margin-bottom: 14px;
+	line-height: 1.3;/*межстрочный интервал*/
+}
+.italic {
+	font-style: italic;
+	color: #090909;
+	margin-top: 20px;
+}
+#portfolio {
+	margin-top: 20px;
+	padding-bottom: 33px;
+	border-bottom: 1px solid #c0c0c0;
+	overflow: hidden;
+}
+.portfolioImage {
+	width: 215px;
+	height: 135px;
+	float: left;
+	margin-right: 33px;
+	position: relative;
+}
+.portfolioImage a {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #090909;
+	display: block;
+	background: #fe9b00;
+	padding: 4px 10px;
+	line-height: 1; /*убираем межстрочный интервал, чтобы он не добавлял отступы*/
+}
+#blog {
+	width: 670px;
+	float: left;
+}
+#social {
+	width: 220px;
+	float: right;
+}
+#bottomRow {
+	margin-top: 22px;
+	overflow: hidden;
+}
+#social ul li {
+	float: left;
+	margin-right: 12px;
+}
+#footer {
+	background: #e2e2e2;
+	padding: 32px 0 36px 0;
+	margin-top: 33px;
+}
+#footerContent {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+#footerContent p{
+	margin: 3px 0 0 0;
+}
+#footerContent a {
+	color: #5d5d5d;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+#footerContent a:hover {
+	text-decoration: underline;
+}
+/*#footerContent ul {
+	overflow: hidden; решение 1, чтобы копирайт не обтекал список
+}*/
+#footerContent ul li {
+	float: left;
+	padding: 0 7px;
+	border-left: 1px solid #5d5d5d;
+	line-height: 1;
+}
+#footerContent ul li:first-child {
+	padding-left: 0; /*убираем отступ слова Home*/
+	border: none;
+}
+.clear {
+	clear: both; /*решение 2, чтобы копирайт не обтекал список*/
+}
+#logoFooter {
+	width: 119px;
+	height: 64px;
+	background: url(../images/logoFooter.png) no-repeat;
+	position: absolute;
+	top: -12px;
+	right: 0;
+}
